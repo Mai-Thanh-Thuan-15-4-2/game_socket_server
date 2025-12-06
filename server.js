@@ -9,7 +9,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://game-socket-7fls.vercel.app", "*"],
+    origin: "*",
     methods: ["GET", "POST"],
     credentials: true
   },
@@ -203,3 +203,4 @@ if (require.main === module) {
     console.log(`Server is running on port ${PORT}`);
   });
 }
+
